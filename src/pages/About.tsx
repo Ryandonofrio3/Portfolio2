@@ -7,8 +7,8 @@ const About: React.FC = () => {
         <div id="about" className="p-5 flex flex-col md:flex-row items-center space-y-5 md:space-y-0 md:space-x-5">
             <div className="flex-1">
                 <img
-                    src="https://via.placeholder.com/300"
-                    alt="Your face"
+                    src="headshot.jpeg"
+                    alt="Headshot"
                     className="w-full object-cover rounded shadow-lg"
                 />
             </div>

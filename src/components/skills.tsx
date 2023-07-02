@@ -39,12 +39,13 @@ const Skill: React.FC<SkillProps> = ({ skill }) => {
     }, [animation, inView, skill.proficiency]);
 
     return (
-        <motion.div className="skill" ref={ref} animate={animation}>
+        <motion.div className="skill" style={{ color: 'white' }} ref={ref} animate={animation}>
             <CircularProgressbarWithChildren
                 value={value}
                 styles={buildStyles({
                     pathColor: '#49de80',
                     trailColor: '#d6d6d6',
+                    textColor: '#FFFFFF',
                 })}
             >
                 <div style={{ fontSize: 12, marginTop: -5 }}>

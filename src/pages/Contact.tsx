@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useForm } from "react-hook-form";
-import { FaBiohazard, FaCode, FaEnvelope } from 'react-icons/fa';
+import { FaBiohazard, FaCode, FaEnvelope, FaMailBulk } from 'react-icons/fa';
 
 const Contact: React.FC = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
 
     return (
         <div id="contact" className="p-5 bg-gradient-to-r from-emerald-500 to-violet-600 text-white">
-            <h2 className="text-2xl mb-5 font-bold"><FaEnvelope className="inline-block mr-2 mb-1" />Get in Touch</h2>
+            <h2 className="text-2xl mb-5 font-bold"><FaEnvelope className="inline-block mr-2 mb-1" />Get in Touch!</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
                 <div>
                     <label htmlFor="name" className="block mb-2">Name</label>
@@ -40,7 +40,7 @@ const Contact: React.FC = () => {
                 </div>
 
                 <button type="submit" className="py-2 px-4 bg-purple-600 hover:bg-purple-700 transition duration-200 rounded text-white">
-                    <FaBiohazard className="inline-block mr-2" /> Submit
+                    <FaMailBulk className="inline-block mr-2" /> Submit
                 </button>
             </form>
         </div>
