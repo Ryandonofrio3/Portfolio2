@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.skill .CircularProgressbar {
+  width: 60px;
+  height: 60px;
+}
+
+.skill .CircularProgressbar .CircularProgressbar-path {
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.skill .CircularProgressbar .CircularProgressbar-trail {
+  stroke: #d6d6d6;
+}
