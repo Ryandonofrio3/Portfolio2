@@ -14,11 +14,11 @@ const Contact: React.FC = () => {
     };
 
     return (
-        <div id="contact" className="p-5 bg-gradient-to-r from-emerald-500 to-violet-600 text-white">
-            <h2 className="text-2xl mb-5 font-bold"><FaEnvelope className="inline-block mr-2 mb-1" />Get in Touch!</h2>
+        <div id="contact" className="p-5 bg-blender text-white">
+            <h2 className="text-2xl mb-5 font-bold"><FaEnvelope className="inline-block mr-2 mb-1" />Get in Touch</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
                 <div>
-                    <label htmlFor="name" className="block mb-2">Name</label>
+                    <label htmlFor="name" className="block mb-2 text-2xl">Name</label>
                     <input
                         id="name"
                         type="text"
@@ -29,7 +29,7 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div>
-                    <label htmlFor="message" className="block mb-2">Message</label>
+                    <label htmlFor="message" className="block mb-2 text-2xl">Message</label>
                     <textarea
                         id="message"
                         {...register("message", { required: true })}

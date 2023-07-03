@@ -13,8 +13,8 @@ interface SkillProps {
 
 const Skill: React.FC<SkillProps> = ({ skill }) => {
     const { ref, inView } = useInView({
-        triggerOnce: true,
-        threshold: 1,
+        triggerOnce: false,
+        threshold: .6,
     });
 
     const animation = useAnimation();
@@ -39,16 +39,15 @@ const Skill: React.FC<SkillProps> = ({ skill }) => {
     }, [animation, inView, skill.proficiency]);
 
     return (
-        <motion.div className="skill" style={{ color: 'white' }} ref={ref} animate={animation}>
+        <motion.div className="skill" ref={ref} animate={animation}>
             <CircularProgressbarWithChildren
                 value={value}
                 styles={buildStyles({
                     pathColor: '#49de80',
-                    trailColor: '#d6d6d6',
-                    textColor: '#FFFFFF',
+                    trailColor: '#FFFFFF',
                 })}
             >
-                <div style={{ fontSize: 12, marginTop: -5 }}>
+                <div style={{ color: 'white', fontSize: 15, marginTop: -5 }}>
                     <strong>{skill.name}</strong>
                 </div>
             </CircularProgressbarWithChildren>
@@ -61,9 +60,9 @@ const Skill: React.FC<SkillProps> = ({ skill }) => {
 const SkillsDisplay: React.FC = () => {
     const skills = [
         { name: 'Python', proficiency: 85 },
-        { name: 'Infusion Cloning', proficiency: 90 },
-        { name: 'CRISPR', proficiency: 80 },
-        { name: 'Other Skills', proficiency: 70 },
+        { name: 'AI Workflows', proficiency: 95 },
+        { name: 'CRISPR', proficiency: 90 },
+        { name: 'Wet Lab', proficiency: 75 },
     ];
 
     return (

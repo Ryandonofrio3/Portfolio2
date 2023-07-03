@@ -5,10 +5,9 @@ module.exports = {
 
   ],
   theme: {
-    colors: {
-      'hero': '#1e1e1e'
+    extend: {
+      colors: { blender: '#1e1e1e' },
     },
-    extend: {},
   },
   plugins: [],
 }
